@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
 
 class Stories extends StatelessWidget {
-  Stories({super.key});
+  const Stories({super.key});
 
   @override
   Widget build(BuildContext context) {
+
+
     return ListView.builder(
       scrollDirection: Axis.horizontal,
 
-      itemCount: 5,
+      itemCount: 7,
       itemBuilder: (BuildContext context, int index) {
         return Column(
-
           children: [
             Padding(
               padding: const EdgeInsets.only(left: 25),
@@ -25,10 +26,10 @@ class Stories extends StatelessWidget {
                       shape: BoxShape.circle,
                       gradient: LinearGradient(
                         colors: [
-                          Colors.red,
                           Colors.yellow,
-                          Colors.pink,
+                          Colors.orange,
                           Colors.purple,
+                          Colors.red,
                         ],
                         begin: Alignment.topLeft,
                         end: Alignment.bottomRight,
@@ -40,9 +41,8 @@ class Stories extends StatelessWidget {
                     height: 70,
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
-                      color: Colors.grey[300],
                       image: DecorationImage(
-                        image: AssetImage('assets/images/grey_icon.jpeg'),
+                        image: AssetImage('assets/images/grey_image.png'),
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -54,7 +54,7 @@ class Stories extends StatelessWidget {
               children: [
                 Padding(
                   padding: const EdgeInsets.only(left: 25),
-                  child: Text('username', style: TextStyle(fontSize: 10)),
+                  child: Text('username', style: TextStyle(fontSize: 12,fontWeight: FontWeight.w500)),
                 ),
               ],
             ),
