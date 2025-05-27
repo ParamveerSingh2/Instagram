@@ -69,6 +69,8 @@ flutter:
      - assets/images/reels_icon.png
      - assets/images/save_icon.png
      - assets/images/user_icon.png
+     - assets/images/grey_icon.jpeg
+     - assets/images/menu_icon.png
 
 #     - images/a_dot_ham.jpeg
 
