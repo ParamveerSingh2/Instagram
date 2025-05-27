@@ -16,7 +16,6 @@ class Header extends StatelessWidget {
                 padding: const EdgeInsets.only(left: 20),
                 child: Image.asset(
                   'assets/images/instagram_text.png',
-                  height: 100,
                   width: 100,
                 ),
               ),
@@ -38,9 +37,9 @@ class Header extends StatelessWidget {
                       padding: const EdgeInsets.all(4.0),
                       child: IconButton(
                         icon: Image.asset(
-                          'assets/images/message_icon.png',
-                          height: 25,
-                          width: 25,
+                          'assets/images/messages_icon.png',
+                          height: 22,
+                          width: 22,
                         ),
                         onPressed: () {},
                       ),

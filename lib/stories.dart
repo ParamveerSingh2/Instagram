@@ -11,6 +11,7 @@ class Stories extends StatelessWidget {
       itemCount: 5,
       itemBuilder: (BuildContext context, int index) {
         return Column(
+
           children: [
             Padding(
               padding: const EdgeInsets.only(left: 25),

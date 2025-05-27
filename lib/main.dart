@@ -37,15 +37,32 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
-      body: Column(
-        children: [
-          Header(),
-          SizedBox(child: Stories(), height: 150),
-          UserPostHeader(),
-          Footer(),
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Header(),
+            Divider(
+              color: Colors.black,
+              thickness: 0.1,
+              indent: 0.1,
+              endIndent: 0.1,
+            ),
+            SizedBox(child: Stories(), height: 100),
+            Divider(color: Colors.black, thickness: 0.1),
+
+            UserPostHeader(),
+            Divider(
+              color: Colors.black,
+              thickness: 0.1,
+              indent: 0.1,
+              endIndent: 0.1,
+            ),
+          ],
+        ),
       ),
+      bottomNavigationBar: Footer(),
     );
   }
 }
