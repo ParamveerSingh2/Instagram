@@ -3,6 +3,7 @@ import 'package:instagram/app_assets.dart';
 
 List<String> usernameList = ['anjali', 'leesha', 'paramveer','amaan'];
 
+
 class Stories extends StatelessWidget {
   const Stories({super.key});
 

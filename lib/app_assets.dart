@@ -14,5 +14,11 @@ class AppAssets {
   String icUser = 'assets/images/user_icon.png';
   String icUserProfileJpg = 'assets/images/user_profile_icon.jpg';
   String icUserProfile = 'assets/images/user_profile_icon.png';
+  String imgProfile = 'assets/images/profile.jpeg';
+  String imgProfile1 = 'assets/images/profile1.jpeg';
+  String imgProfile2 = 'assets/images/profile2.jpeg';
+  String imgProfile3 = 'assets/images/profile3.jpeg';
+  String imgProfile4 = 'assets/images/profile4.jpeg';
+  String imgProfile5 = 'assets/images/profile5.jpeg';
 
 }

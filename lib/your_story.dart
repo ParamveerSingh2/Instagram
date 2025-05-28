@@ -34,11 +34,11 @@ class YourStory extends StatelessWidget{
                   child: IconButton(
                     icon: const Icon(CupertinoIcons.plus_circle_fill),
                     color: Colors.blue,
-                    style: OutlinedButton.styleFrom(
-                      side: BorderSide(color: Colors.white, width: 9),
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(99)),
-
-                    ),
+                    // style: OutlinedButton.styleFrom(
+                    //   side: BorderSide(color: Colors.white, width: 9),
+                    //   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(99)),
+                    //
+                    // ),
 
                     onPressed: () {
                       // ...

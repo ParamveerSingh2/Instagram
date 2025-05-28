@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:instagram/app_assets.dart';
-List<String> usernameList = ['anjali', 'leesha', 'paramveer','amaan'];
+import 'user_data.dart';
+// Sample list of users with their posts (images list is empty for now)
 
 class UserPostHeader extends StatelessWidget {
   const UserPostHeader({super.key});
@@ -9,7 +10,7 @@ class UserPostHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
     return ListView.builder(
-      itemCount: usernameList.length,
+      itemCount: userNameList.length,
       shrinkWrap: true,
       physics: NeverScrollableScrollPhysics(),
       itemBuilder: (BuildContext context, int index) {
@@ -46,9 +47,7 @@ class UserPostHeader extends StatelessWidget {
                           shape: BoxShape.circle,
 
                           image: DecorationImage(
-                            image: AssetImage(
-                              AppAssets().icUserProfileJpg,
-                            ),
+                            image: AssetImage(AppAssets().icUserProfileJpg),
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -57,28 +56,28 @@ class UserPostHeader extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  usernameList[index],
+                  userNameList[index].name,
                   style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
                 ),
                 Spacer(),
                 IconButton(
-                  icon: Image.asset(
-                   AppAssets().icMenu,
-                    height: 25,
-                    width: 25,
-                  ),
+                  icon: Image.asset(AppAssets().icMenu, height: 25, width: 25),
                   onPressed: () {},
                 ),
               ],
             ),
-            Row(
-              children: [
-                Image(
-                  image: AssetImage(AppAssets().icGrey),
-                  height: screenWidth,
-                  width: screenWidth,
+            SizedBox(
+              height: 400,
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: List.generate(userNameList[index].userPost.length, (
+                    postIndex,
+                  ) {
+                    return Image.asset(userNameList[index].userPost[postIndex]);
+                  }),
                 ),
-              ],
+              ),
             ),
             Row(
               children: [
@@ -88,27 +87,19 @@ class UserPostHeader extends StatelessWidget {
                 ),
                 IconButton(
                   icon: Image.asset(
-                   AppAssets().icComments,
+                    AppAssets().icComments,
                     height: 22,
                     width: 22,
                   ),
                   onPressed: () {},
                 ),
                 IconButton(
-                  icon: Image.asset(
-                    AppAssets().icSend,
-                    height: 22,
-                    width: 22,
-                  ),
+                  icon: Image.asset(AppAssets().icSend, height: 22, width: 22),
                   onPressed: () {},
                 ),
                 Spacer(),
                 IconButton(
-                  icon: Image.asset(
-                    AppAssets().icSave,
-                    height: 22,
-                    width: 22,
-                  ),
+                  icon: Image.asset(AppAssets().icSave, height: 22, width: 22),
                   onPressed: () {},
                 ),
               ],
