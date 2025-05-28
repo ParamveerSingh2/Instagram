@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:instagram/app_assets.dart';
 
-List<String> usernameList = ['anjali', 'leesha', 'paramveer'];
+List<String> usernameList = ['anjali', 'leesha', 'paramveer','amaan'];
 
 class Stories extends StatelessWidget {
   const Stories({super.key});
@@ -42,7 +43,7 @@ class Stories extends StatelessWidget {
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       image: DecorationImage(
-                        image: AssetImage('assets/images/grey_image.png'),
+                        image: AssetImage(AppAssets().icGrey),
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -50,7 +51,7 @@ class Stories extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: 8),
+            // SizedBox(height: 8),
             Text(
               usernameList[index],
               style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500),

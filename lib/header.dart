@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instagram/app_assets.dart';
 
 class Header extends StatelessWidget {
   const Header({super.key});
@@ -15,7 +16,7 @@ class Header extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(left: 20),
                 child: Image.asset(
-                  'assets/images/instagram_text.png',
+                  AppAssets().icInstagram,
                   width: 100,
                 ),
               ),
@@ -37,7 +38,7 @@ class Header extends StatelessWidget {
                       padding: const EdgeInsets.all(4.0),
                       child: IconButton(
                         icon: Image.asset(
-                          'assets/images/messages_icon.png',
+                          AppAssets().icMessages,
                           height: 22,
                           width: 22,
                         ),

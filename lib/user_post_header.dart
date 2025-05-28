@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-List<String> usernameList = ['anjali', 'leesha', 'paramveer'];
+import 'package:instagram/app_assets.dart';
+List<String> usernameList = ['anjali', 'leesha', 'paramveer','amaan'];
 
 class UserPostHeader extends StatelessWidget {
   const UserPostHeader({super.key});
@@ -46,7 +47,7 @@ class UserPostHeader extends StatelessWidget {
 
                           image: DecorationImage(
                             image: AssetImage(
-                              'assets/images/user_profile_icon.jpg',
+                              AppAssets().icUserProfileJpg,
                             ),
                             fit: BoxFit.cover,
                           ),
@@ -62,7 +63,7 @@ class UserPostHeader extends StatelessWidget {
                 Spacer(),
                 IconButton(
                   icon: Image.asset(
-                    'assets/images/menu_icon.png',
+                   AppAssets().icMenu,
                     height: 25,
                     width: 25,
                   ),
@@ -73,7 +74,7 @@ class UserPostHeader extends StatelessWidget {
             Row(
               children: [
                 Image(
-                  image: AssetImage('assets/images/grey_image.png'),
+                  image: AssetImage(AppAssets().icGrey),
                   height: screenWidth,
                   width: screenWidth,
                 ),
@@ -87,7 +88,7 @@ class UserPostHeader extends StatelessWidget {
                 ),
                 IconButton(
                   icon: Image.asset(
-                    'assets/images/comments_icon.png',
+                   AppAssets().icComments,
                     height: 22,
                     width: 22,
                   ),
@@ -95,7 +96,7 @@ class UserPostHeader extends StatelessWidget {
                 ),
                 IconButton(
                   icon: Image.asset(
-                    'assets/images/send_icon.png',
+                    AppAssets().icSend,
                     height: 22,
                     width: 22,
                   ),
@@ -104,7 +105,7 @@ class UserPostHeader extends StatelessWidget {
                 Spacer(),
                 IconButton(
                   icon: Image.asset(
-                    'assets/images/save_icon.png',
+                    AppAssets().icSave,
                     height: 22,
                     width: 22,
                   ),

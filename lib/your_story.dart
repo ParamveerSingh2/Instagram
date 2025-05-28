@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'app_assets.dart';
 
 class YourStory extends StatelessWidget{
   const YourStory ({super.key});
@@ -21,7 +22,7 @@ class YourStory extends StatelessWidget{
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   image: DecorationImage(
-                    image: AssetImage('assets/images/grey_image.png'),
+                    image: AssetImage(AppAssets().icGrey),
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -29,12 +30,21 @@ class YourStory extends StatelessWidget{
               Positioned(
                 bottom: -8, // Position at the bottom
                 right: -8, // Position at the right
-                child: IconButton(
-                  icon: const Icon(CupertinoIcons.plus_circle_fill),
-                  color: Colors.blue,
-                  onPressed: () {
-                    // ...
-                  },
+                child: Container(decoration: BoxDecoration(border: Border.all(color: Colors.transparent)),
+                  child: IconButton(
+                    icon: const Icon(CupertinoIcons.plus_circle_fill),
+                    color: Colors.blue,
+                    style: OutlinedButton.styleFrom(
+                      side: BorderSide(color: Colors.white, width: 9),
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(99)),
+
+                    ),
+
+                    onPressed: () {
+                      // ...
+                    },
+
+                  ),
                 ),
                 ),
 

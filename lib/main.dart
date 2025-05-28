@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:instagram/app_assets.dart';
 import 'package:instagram/footer.dart';
 import 'package:instagram/header.dart';
 import 'package:instagram/stories.dart';
-import 'package:instagram/user_post.dart';
 import 'package:instagram/user_post_header.dart';
 import 'package:instagram/your_story.dart';
 
-
 void main() {
   runApp(const MyApp());
-
 }
 
 class MyApp extends StatelessWidget {
@@ -45,11 +43,13 @@ class _MyHomePageState extends State<MyHomePage> {
       child: Scaffold(
         body: Column(
           children: [
-            Header(), //header including instagram icon and notification and message section
+            Header(),
+            //header including instagram icon and notification and message section
             Expanded(
               child: ListView(
                 children: [
-                  Divider( // divider between header and stories section
+                  Divider(
+                    // divider between header and stories section
                     color: Colors.black,
                     thickness: 0.1,
                     indent: 0.1,
@@ -64,15 +64,13 @@ class _MyHomePageState extends State<MyHomePage> {
                               Row(
                                 children: [
                                   YourStory(),
-                                  SizedBox(height: 10,width: 10,),
-                                  SizedBox(height: 100, child: Stories()), // stories section
-
-
+                                  SizedBox(height: 10, width: 10),
+                                  SizedBox(height: 100, child: Stories()),
+                                  // stories section
                                 ],
                               ),
                             ],
-                          )
-
+                          ),
                         ],
                       ),
                     ],

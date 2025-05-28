@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instagram/app_assets.dart';
 
 class Footer extends StatelessWidget {
   const Footer({super.key});
@@ -10,7 +11,7 @@ class Footer extends StatelessWidget {
       children: [
         IconButton(
           icon: Image.asset(
-            'assets/images/home_icon.png',
+            AppAssets().icHome,
             height: 25,
             width: 25,
           ),
@@ -18,7 +19,7 @@ class Footer extends StatelessWidget {
         ),
         IconButton(
           icon: Image.asset(
-            'assets/images/search_icon.png',
+            AppAssets().icSearch,
             height: 25,
             width: 25,
           ),
@@ -26,7 +27,7 @@ class Footer extends StatelessWidget {
         ),
         IconButton(
           icon: Image.asset(
-            'assets/images/save_icon.png',
+            AppAssets().icUpload,
             height: 25,
             width: 25,
           ),
@@ -34,7 +35,7 @@ class Footer extends StatelessWidget {
         ),
         IconButton(
           icon: Image.asset(
-            'assets/images/reels_icon.png',
+            AppAssets().icReels,
             height: 25,
             width: 25,
           ),
@@ -42,7 +43,7 @@ class Footer extends StatelessWidget {
         ),
         IconButton(
           icon: Image.asset(
-            'assets/images/user_icon.png',
+            AppAssets().icUser,
             height: 25,
             width: 25,
           ),
