@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+List<String> usernameList = ['anjali', 'leesha', 'paramveer'];
 
 class UserPostHeader extends StatelessWidget {
   const UserPostHeader({super.key});
@@ -7,7 +8,7 @@ class UserPostHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
     return ListView.builder(
-      itemCount: 3,
+      itemCount: usernameList.length,
       shrinkWrap: true,
       physics: NeverScrollableScrollPhysics(),
       itemBuilder: (BuildContext context, int index) {
@@ -55,7 +56,7 @@ class UserPostHeader extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  'username',
+                  usernameList[index],
                   style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
                 ),
                 Spacer(),
